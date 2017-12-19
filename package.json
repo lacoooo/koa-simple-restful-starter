@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "busboy": "^0.2.14",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.3.0",
+    "koa-static": "^4.0.2",
+    "mysql2": "^1.5.1",
+    "sequelize": "^4.28.5"
+  }
+}
