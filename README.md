@@ -12,3 +12,5 @@ mysql
 sequelize 
 koa-static 
 typescript
+
+近期将加入webpack
