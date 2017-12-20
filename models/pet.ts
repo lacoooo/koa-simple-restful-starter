@@ -1,31 +1,25 @@
 const poolUse = require('./init.ts')
 const Seq = require('sequelize')
 
-let Pet = poolUse.define('pet', {
-    id: {
-        type: Seq.STRING(50),
-        primaryKey: true
-    },
-    name: Seq.STRING(100),
-    gender: Seq.BOOLEAN,
-    birth: Seq.STRING(10),
-    createdAt: Seq.BIGINT,
-    updatedAt: Seq.BIGINT,
-    version: Seq.BIGINT
-}, {
-        timestamps: false
-    })
+const User = poolUse.define('user', {
+    username: Seq.STRING,
+    birthday: Seq.DATE
+});
 
 let b = async () => {
-    let pets = await Pet.findAll({
-        where: {
-            name: 'haha'
-        }
+    await poolUse.sync()
+    let result = await User.create({
+        username: 'janedoe',
+        birthday: new Date(1980, 6, 20)
     })
-    console.log(JSON.stringify({ a: 122 }))
-    return JSON.stringify({ a: 122 })
+    return result.toJSON()
+}
+
+let c = async () => {
+    return await User.findAll()
 }
 
 module.exports = {
-    b
+    b,
+    c
 }
