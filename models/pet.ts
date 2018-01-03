@@ -1,5 +1,5 @@
-const poolUse = require('./init.ts')
-const Seq = require('sequelize')
+import poolUse from './init'
+import Seq from 'sequelize'
 
 const User = poolUse.define('user', {
     username: Seq.STRING,
@@ -19,7 +19,7 @@ let c = async () => {
     return await User.findAll()
 }
 
-module.exports = {
+export default {
     b,
     c
 }

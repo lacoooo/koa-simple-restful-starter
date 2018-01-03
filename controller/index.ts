@@ -1,6 +1,6 @@
-const models = require('../models/pet.ts')
+import models from '../models/pet'
 
-module.exports = {
+export default {
     async index() {
         let data = {b: '', c: ''}
         data.b = await models.b()

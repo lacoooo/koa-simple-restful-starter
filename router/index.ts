@@ -1,9 +1,10 @@
-const controler = require('../controler/index.ts')
-const Router = require('koa-router')
-const route = new Router()
+import controller from '../controller/index'
+import * as Router from 'koa-router'
+const api = new Router()
 
-route.get('/test', async (ctx, next) => {
-    ctx.body = await controler.index()
+api.get('/test', async (ctx, next) => {
+    // ctx.body = await controller.index()
+    ctx.body = '122'
 })
 
-module.exports = route
+export default api

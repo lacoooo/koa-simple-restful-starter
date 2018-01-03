@@ -2,10 +2,16 @@
   "name": "koa-starter",
   "version": "1.0.0",
   "scripts": {
-    "once": "node main.ts",
-    "dev": "nodemon main.ts"
+    "dev": "nodemon ./server/main.js",
+    "tsc": "tsc -w",
+    "dev-w": "tsc -w && nodemon ./server/main.js",
+    "build": "tsc"
   },
   "dependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.24",
+    "@types/koa-compress": "^2.0.7",
+    "@types/koa-router": "^7.0.23",
     "busboy": "^0.2.14",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
@@ -13,9 +19,11 @@
     "koa-router": "^7.3.0",
     "koa-static-cache": "^5.1.1",
     "mysql2": "^1.5.1",
+    "pm2": "^2.9.1",
     "sequelize": "^4.28.6"
   },
   "devDependencies": {
-    "nodemon": "^1.14.0"
+    "nodemon": "^1.14.0",
+    "typescript": "^2.6.2"
   }
 }

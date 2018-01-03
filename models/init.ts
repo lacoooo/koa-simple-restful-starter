@@ -1,5 +1,5 @@
-const config =  require('./config.ts')
-const Sequelize = require('sequelize')
+import config from './config'
+import Sequelize from 'sequelize'
 
 let pool = new Sequelize(config.database, config.username, config.password, {
     host: config.host,
@@ -11,4 +11,4 @@ let pool = new Sequelize(config.database, config.username, config.password, {
     }
 })
 
-module.exports = pool
+export default pool

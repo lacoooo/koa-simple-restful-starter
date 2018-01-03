@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     database: 'test', // 使用哪个数据库
     username: 'root', // 用户名
     password: '', // 口令
