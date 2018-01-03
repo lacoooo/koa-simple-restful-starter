@@ -4,7 +4,11 @@ const api = new Router()
 
 api.get('/test', async (ctx, next) => {
     // ctx.body = await controller.index()
-    ctx.body = '122'
+    ctx.body = ctx.cookie
 })
+    .post('/test', async (ctx, next) => {
+        // ctx.body = await controller.index()
+        ctx.body = ctx.cookie
+    })
 
 export default api

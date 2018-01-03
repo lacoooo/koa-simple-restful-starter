@@ -9,7 +9,7 @@ const User = poolUse.define('user', {
 let b = async () => {
     await poolUse.sync()
     let result = await User.create({
-        username: 'janedoe',
+        username: 'N',
         birthday: new Date(1980, 6, 20)
     })
     return result.toJSON()
