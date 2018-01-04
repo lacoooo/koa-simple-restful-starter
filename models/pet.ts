@@ -20,6 +20,5 @@ let c = async () => {
 }
 
 export default {
-    b,
-    c
+    b,c
 }
