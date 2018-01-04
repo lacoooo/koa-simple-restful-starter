@@ -2,9 +2,8 @@
   "name": "koa-starter",
   "version": "1.0.0",
   "scripts": {
-    "dev": "nodemon ./server/main.js",
+    "nodemon": "nodemon ./server/main.js",
     "tsc": "tsc -w",
-    "dev-w": "tsc -w && nodemon ./server/main.js",
     "build": "tsc",
     "start": "pm2 start ./server/main.js --watch",
     "stop": "pm2 delete all"
