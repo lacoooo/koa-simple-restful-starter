@@ -2,19 +2,12 @@
 
 一个简洁的rest api起手项目
 
-支持静态文件服务, 可将编译后的前端文件放入dist目录
+语言: typescript ===> 支持es6模块
 
-用到了：
+支持开发热更新
 
-koa 
-koa-router 
-mysql 
-sequelize 
-koa-static 
-typescript
+支持跨域请求
 
-开发时可热更新
+使用sequelize, 默认设置为mysql
 
-运行 npm run dev
-
-
+开发命令 & 启动命令 见package.json
