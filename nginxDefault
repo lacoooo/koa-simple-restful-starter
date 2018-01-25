@@ -1,0 +1,11 @@
+server { 
+		listen 80; 
+		server_name api;
+		root /frontend;
+
+		location /api {
+			rewrite ^/api/(.*) /$1 break;
+			proxy_pass http://localhost:8000;
+		}
+
+	}
