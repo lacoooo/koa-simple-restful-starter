@@ -1,7 +1,9 @@
 export default {
-    database: 'test', // 使用哪个数据库
-    username: 'root', // 用户名
-    password: '885413', // 口令
-    host: 'localhost', // 主机名
-    port: 3306 // 端口号，MySQL默认3306
+    database: 'test',
+    username: 'root',
+    password: '885413',
+    host: '106.14.168.156',
+    // host: 'localhost',
+    port: 3306
+    
 }

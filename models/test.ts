@@ -1,16 +1,22 @@
 import poolUse from './init'
 import Seq from 'sequelize'
 
-const User = poolUse.define('user', {
-    username: Seq.STRING,
-    birthday: Seq.DATE
-});
+const name = 'todoList'
+const rebuild = { force: true }
+const setting = { timestamps: false }
+const content = {
+    todo: Seq.STRING
+}
+
+const todo = poolUse.define(name, content, setting)
+
+// 创建表
+todo.sync()
 
 let b = async () => {
     try {
-        let result = await User.create({
-            username: 'N',
-            birthday: new Date(1980, 6, 20)
+        let result = await todo.create({
+            todo: 'N'
         })
         return { status: 1 }
     } catch {
@@ -21,7 +27,7 @@ let b = async () => {
 let c = async () => {
     try {
         return {
-            data: await User.findAll(),
+            data: await todo.findAll(),
             status: 1
         }
     } catch {
