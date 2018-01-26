@@ -8,4 +8,5 @@ api
     .get('/count', async (ctx, next) => {
         ctx.body = await controller.index()
     })
+
 export default api

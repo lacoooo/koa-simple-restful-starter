@@ -4,8 +4,9 @@
   "scripts": {
     "nodemon": "nodemon ./server/main.js",
     "tsc": "tsc -w",
+    "dev": "node ./dev.js",
     "build": "tsc",
-    "start": "pm2 start ./server/main.js --watch",
+    "start": "pm2 start ./server/main.js -w",
     "stop": "pm2 delete all"
   },
   "dependencies": {
@@ -22,7 +23,8 @@
     "koa-router": "^7.3.0",
     "mysql2": "^1.5.1",
     "pm2": "^2.9.1",
-    "sequelize": "^4.28.6"
+    "sequelize": "^4.28.6",
+    "shelljs": "^0.8.1"
   },
   "devDependencies": {
     "nodemon": "^1.14.0",
