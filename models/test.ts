@@ -3,15 +3,15 @@ import Seq from 'sequelize'
 
 const name = 'todoList'
 const rebuild = { force: true }
-const setting = { timestamps: false }
+const setting = { timestamps: true }
 const content = {
     todo: Seq.STRING
 }
 
-const todo = poolUse.define(name, content, setting)
+const todo = poolUse.define(name, content)
 
 // 创建表
-todo.sync()
+todo.sync(rebuild)
 
 let b = async () => {
     try {
